@@ -1,20 +1,16 @@
 import "./App.css";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
 
 function App() {
   return (
     <div className="App">
-      <Phone />
+      <PhoneList />
     </div>
   );
 }
 
 export default App;
 
-function Phone() {
+function PhoneList() {
   const mobile = [
     {
       model: "OnePlus 9 5G",
@@ -38,28 +34,20 @@ function Phone() {
     },
   ];
   return (
-    <div>
-      {mobile.map((eve) => (
-        <PhoneList model={eve.model} img={eve.img} company={eve.company} />
+    <div className="phone-list-container">
+      {mobile.map((mbl, prop) => (
+        <Phone mobile={mbl} key={prop} />
       ))}
     </div>
   );
 }
 
-function PhoneList({ model, img, company }) {
+function Phone({ mobile }) {
   return (
-    <div>
-      <Card sx={{ maxWidth: 500, margin: 5 }}>
-        <CardMedia sx={{ height: 500 }} image={img} alt={model} />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {model}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {company}
-          </Typography>
-        </CardContent>
-      </Card>
+    <div className="phone-container">
+      <img className="phone-picture" src={mobile.img} alt={mobile.model} />
+      <h2>{mobile.model}</h2>
+      <p className="phone-company">{mobile.company}</p>
     </div>
   );
 }

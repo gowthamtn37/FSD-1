@@ -3,14 +3,15 @@
 }
 
 .phone-picture {
-  height: 540px;
-  width: 750px;
+  margin: 10px;
+  height: 300px;
+  width: 300px;
   object-fit: contain;
 }
 
 .phone-container {
   background-color: white;
-  width: 750px;
+  width: 355px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: rgb(0 0 0 / 24%) 1px 2px 13px;
