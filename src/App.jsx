@@ -3,6 +3,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
+import { margin } from "@mui/system";
 
 function App() {
   return (
@@ -49,7 +50,7 @@ function Phone() {
 function PhoneList({ model, img, company }) {
   return (
     <div>
-      <Card sx={{ maxWidth: 500 }}>
+      <Card sx={{ maxWidth: 500, margin: 5 }}>
         <CardMedia sx={{ height: 500 }} image={img} alt={model} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
