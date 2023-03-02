@@ -3,7 +3,6 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { margin } from "@mui/system";
 
 function App() {
   return (
@@ -41,7 +40,7 @@ function Phone() {
   return (
     <div>
       {mobile.map((eve) => (
-        <PhoneList model={eve.model} img={eve.img} company={eve.img} />
+        <PhoneList model={eve.model} img={eve.img} company={eve.company} />
       ))}
     </div>
   );
